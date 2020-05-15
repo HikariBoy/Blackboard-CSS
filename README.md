@@ -21,7 +21,8 @@ The new entry styles for  [<b>Fill in Multiple Blanks Questions </b>](https://he
  * Two stypes of entry boxes available, one that take 50% of the horizontal screen width and the other takes 90%, so both are considerably longer than teh number based entry bbox_inches<br><br>
 
  A comparison of the different entry boxes styles is shown below and I have made a small video<br>
- <video src="resources/Q7_explained.mp4" poster="resources/Q7_after.png" width="320" height="200" controls preload></video>
+ <video src="resources/Q7_explained.mp4"  width="320" height="200" controls preload></video> <br>  
+ 
 <img src="resources/Q7_after.png" alt="Figure 1. Illustration of a typical and improved LMS question style.  Use of styled fonts for heading can imporve appeal, orange entryboxes are used to indicated word based entry is required, while light-blue entry boxes indicate numberic (with or without units) are required."  align="center" width="800"/> <br> <figcaption >  <I><b>Figure 1: </b></I>  Illustration of a typical and improved LMS question style.  Use of styled fonts for heading can imporve appeal, orange entryboxes are used to indicated word based entry is required, while light-blue entry boxes indicate numberic (with or without units) are required.<br>
 
 When using [Fill in Multiple Blanks Questions](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions), type the question text as students will see it, but replace the missing information with variables in square brackets. Bracketed variables appear as text boxes to students. Variables for [Fill in Multiple Blanks Questions](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions) can be any (unique) letter or word.
@@ -39,7 +40,7 @@ Results in<br>
  <code>\<span  class="AdrianNumberBox"> Enter your numeric response here: [num1] \</span></code><br>
  Results in<br>
  <code> Enter your numeric response here:</code><br><img src="resources/Sentence90.png" alt="SentenceEntry"  width="600"/> <br>  
- I have included sample HTML code for [Q6](Q6_HTML.txt) and [Q7](Q7_HTML.txt) that you can cut and paste into the HTML entry of a [Fill in Multiple Blanks Question](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions)  If you just want to view these on a brower to see the effect, try these links to [Q6](https://htmlpreview.github.io/Q6_BrowersView.html) and [Q7](https://htmlpreview.github.io/Q7_BrowersView.html) (which should nto be used in an Blackboard question).  Take note of the animation which is now also possible in Blackboard using the the new [AdrianStyle.css](Adrian.css) sheet
+ I have included sample HTML code for [Q6](Q6_HTML.txt) and [Q7](Q7_HTML.txt) that you can cut and paste into the HTML entry of a [Fill in Multiple Blanks Question](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions)  If you just want to view these on a brower to see the effect, try these links to [Q6](http://htmlpreview.github.io/?Q6_BrowersView.html) and [Q7](http://htmlpreview.github.io/?Q7_BrowersView.html) (which should nto be used in an Blackboard question).  Take note of the animation which is now also possible in Blackboard using the the new [AdrianStyle.css](Adrian.css) sheet
 ### New Fonts in BlackBoard
 Intersted in adding new fonts to the standard Blackboard interface.  To do this you need to add a link to a new font and reference it within a tag (\<p> or \<span>) for example: <br>
 <code> \<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
