@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+::placeholder {
+  color: red;
+  opacity: 0.3; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: red;
+}
+
+
+
+.foobar { color: green; font-weight: bold;}
+.AdrianBlue { color: blue; font-weight: bold;}
+.AdrianBasicTextBox input[type="text"], textarea { background-color : LightBlue;}
+.AdrianTextBox input[type="text"], textarea { background-color : LightBlue;
+font-size: 16px;
+padding: 5px 5px;
+margin: 8px 0;
+width: 120px;
+display: inline-block;
+border: 2px solid black;
+border-radius: 4px;
+font-family: 'Inconsolata', monospace;
+box-sizing: border-box; }
+.AdrianNumberBox input[type="text"], textarea { background-color : LightBlue;
+font-size: 16px;
+padding: 5px 5px;
+margin: 8px 0;
+width: 120px;
+display: inline-block;
+border: 2px solid black;
+border-radius: 4px;
+box-sizing: border-box;
+font-family: 'Inconsolata', monospace;
+  }
+.AdrianSentenceBox input[type="text"], textarea { background-color : #ffb366;
+font-size: 16px;
+padding: 5px 5px;
+margin: 8px 0;
+width: 50%;
+display: inline-block;
+border: 1px solid black;
+border-radius: 1px;
+box-sizing: border-box;
+font-family: 'Arial';}
+
+.AdrianSentenceBox90 input[type="text"], textarea { background-color : #ffb366;
+font-size: 16px;
+padding: 5px 5px;
+margin: 8px 0;
+width: 90%;
+display: inline-block;
+border: 1px solid black;
+border-radius: 1px;
+box-sizing: border-box;
+font-family: 'Arial';}
+
+/* blinks coutesy of https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3  */
+.AdrianFadeBlink {
+  animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+}
+@keyframes blinker { to { opacity: 0; } }
+
+.Adrianblink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {  50% {    opacity: 0;  }}
+
+.AdrianShadowTangerine {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+        text-shadow: 4px 4px 4px #aaa;
+}
+
+.AdrianShadowInconsolata {
+        font-family: 'Inconsolata', monospace;
+        font-size: 24px;
+        text-shadow: 4px 4px 4px #aaa;
+}
+
+$background: #E4FFF7;
+
+@function textShadow($precision, $size, $color){
+  $value: null;
+  $offset: 0;
+  $length: $size * (1 / $precision) - 1;
+
+  @for $i from 0 through $length {
+    $offset: $offset + $precision;
+    $shadow: $offset + px $offset + px $color;
+    $value: append($value, $shadow, comma);
+  }
+
+  @return $value;
+}
+
+.playful span {
+  position: relative;
+  color: #5362F6;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation: scatter 1.75s infinite;
+}
+
+.playful span:nth-child(2n) {
+  color: #ED625C;
+  text-shadow: textShadow(0.25, 6, #F2A063);
+  animation-delay: 0.3s;
+}
+
+.playful span:nth-child(3n) {
+  color: #FFD913;
+  text-shadow: textShadow(0.25, 6, #6EC0A9);
+  animation-delay: 0.15s;
+}
+
+.playful span:nth-child(5n) {
+  color: #555BFF;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation-delay: 0.4s;
+}
+
+.playful span:nth-child(7n), .playful span:nth-child(11n) {
+  color: #FF9C55;
+  text-shadow: textShadow(0.25, 6, #FF5555);
+  animation-delay: 0.25s;
+}
+
+@keyframes scatter {
+  0% {
+    top: 20px;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+body {
+  background-color: $background;
+}
