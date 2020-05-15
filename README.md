@@ -37,21 +37,21 @@ For example<br>
  <code>Enter your numeric response here: [num1] </code><br>
 to use the new number style entry box simple add the \<span> tag and include my new class <code>AdrianNumberBox</code> (using the HTML entry format on LMS)<br>
  <code>\<span  class="AdrianNumberBox"> Enter your numeric response here: [num1] \</span></code><br>
- Results in<br>
+ Results in (only when displayed in a Blackboard deployed question)<br>  
 <code> Enter your numeric response here:</code><img src="resources/Number.png" alt="NumberEntry" align="justify" width="100"/> <br>
-to use the new sentence style 50% wide style entry box simple add the \<span> tag and include my new class <code>AdrianSentenceBox</code>  (using the HTML entry format on LMS)<br>
+To use the new sentence style with a 50% wide style entry box, simply add the \<span> tag and include my new class <code>AdrianSentenceBox</code>  (using the HTML entry format on LMS)<br>
 <code>\<span  class="AdrianSentenceBox"> Enter your numeric response here: [num1] \</span></code><br>  
-Results in<br>
-<code> Enter your numeric response here:</code><img src="resources/Sentence50.png" alt="SentenceEntry" align="justify" width="300"/> <br>
- to use the new sentence style 90% wide style entry box simple add the \<span> tag and include my new class <code>AdrianNumberSentence90</code> (using the HTML entry format on LMS)<br>
+Results in (only when displayed in a Blackboard deployed question)<br>
+<code> Enter your numeric response here:</code><img src="resources/Sentence50.png" alt="SentenceEntry" align="justify" width="300"/> <br>  
+ To use the new sentence style with a 90% wide entry box, simply add the \<span> tag and include my new class <code>AdrianNumberSentence90</code> (using the HTML entry format on LMS)<br>
  <code>\<span  class="AdrianNumberBox"> Enter your numeric response here: [num1] \</span></code><br>
- Results in<br>
+ Results in (only when displayed in a Blackboard deployed question)<br>
  <code> Enter your numeric response here:</code><br><img src="resources/Sentence90.png" alt="SentenceEntry"  width="600"/> <br>  
- I have included sample HTML code for [Q6](Q6_HTML.txt) and [Q7](Q7_HTML.txt) that you can cut and paste into the HTML entry of a [Fill in Multiple Blanks Question](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions)  If you just want to view these on a brower to see the effect, try these links to [Q6](http://htmlpreview.github.io/?https://github.com/HikariBoy/Blackboard-CSS/blob/master/Q6_BrowserView.html) and [Q7](http://htmlpreview.github.io/?https://github.com/HikariBoy/Blackboard-CSS/blob/master/Q7_BrowserView.html) (which should not be used in an Blackboard question).  Take note of the animation which is now also possible in Blackboard using the the new [AdrianStyle.css](Adrianstyle.css) sheet
-### New Fonts in BlackBoard
-Interested in adding new fonts to the standard Blackboard interface.  To do this you need to add a link to a new font and reference it within a tag (\<p> or \<span>) for example: <br>
+ I have included sample HTML code for [Q6](Q6_HTML.txt) and [Q7](Q7_HTML.txt) that you can cut and paste into the HTML entry of a [Fill in Multiple Blanks Question](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions).  If you just want to view these on a brower to see the effect, try these links to [Q6](http://htmlpreview.github.io/?https://github.com/HikariBoy/Blackboard-CSS/blob/master/Q6_BrowserView.html) and [Q7](http://htmlpreview.github.io/?https://github.com/HikariBoy/Blackboard-CSS/blob/master/Q7_BrowserView.html) (which should not be used in an Blackboard question).  Take note of the animation in [Q7](http://htmlpreview.github.io/?https://github.com/HikariBoy/Blackboard-CSS/blob/master/Q7_BrowserView.html) which is now also possible in Blackboard using the the new [AdrianStyle.css](Adrianstyle.css) sheet
+## New Fonts in BlackBoard
+Interested in adding new fonts to the standard Blackboard interface ?  To do this you need to add a link to a new font and reference it within a tag (\<p> or \<span>) for example: <br>
 <code> \<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-\<p style="font-family: 'Balsamiq Sans', cursive;"> Welcome to the new world of LMS</p></code>
+\<p style="font-family: 'Balsamiq Sans', cursive;"> Welcome to the new world of LMS\</p></code>
 To achieve this:  
 1) select your font.  Go to https://fonts.google.com/  and review the fonts and decide on one  
 2) select the font and then select <b>Embed</b> Menu item on the right side of screen.  This contains the link to use in the top of the LMS question and the CSS style to use in the HTL tag (as shown in the example above)
@@ -59,5 +59,5 @@ To achieve this:
 
 3) Copy the<b>Link</b> (which starts with <code> \<link href="https://fonts.googleapis.com....</code> and add to the to pof the HTML page of your Blackboard question<br>
 4) Copy the <b>CSS</b> (which starts with <code> font-family: </code> and use this just before the text you want to change the font of for example <br>
-    <code>  \<p style="font-family: 'Balsamiq Sans', cursive;"> Welcome to the new world of LMS</p> </code>
+<code>  \<p style="font-family: 'Balsamiq Sans', cursive;"> Welcome to the new world of LMS\</p> </code><br>
 5) Note the the fonts will not be viewable until you save the question and view the Question in a regular deployed test.  If you want to try out what it will look like before adding to LMS, you can paste you Blackboard HTML code into an [code viewing fiddle](http://jsfiddle.net)
