@@ -14,7 +14,9 @@ Text (or number) based entry boxes are used extensively in [<b>Fill in Multiple 
  > Note: the features provided here can enhance the display of information, but does need a basic understanding of HTML.<br>
 
  The improvements here are obtained throug the use of a [external CSS stylesheet](https://www.w3schools.com/css/css_howto.asp) sheet which needs to be added to the content collection for the particular unit of interest. To start, download this github by clicking on the green <b>clone</b> button at the top right of this github and selecting download.  After downloading, extract the .ZIP file where you will find the styles sheet and example .txt files (in HTML) to try in your Blackboard Questions.<br>
-To explore the new styles, upload the file [AdrianStyle.css](AdrianStyle.css) into the [content collection of your unit](https://help.blackboard.com/Learn/Student/Content/Content_Collection).  Once done, the new functions are ready to use.  
+To explore the new styles, upload the file [AdrianStyle.css](AdrianStyle.css) into the [content collection of your unit](https://help.blackboard.com/Learn/Student/Content/Content_Collection).  Once uploaded, in the content collection right click on the file and select <code>Edit Settings</code> and then in the next window note down the <b>Permanent URL</b> of the file, something like:
+<code> https://lms.uwa.edu.au/bbcswebdav/xid-25457619_1 </code>
+Once done, to use the functions in Blackboard you just need some minor exits to existing Blackboard (HTML) questions you may have developed.  
 ### Features
 The new entry styles for  [<b>Fill in Multiple Blanks Questions </b>](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions)  are:
 * For number based question.  A new text entry box is created with the following features
@@ -27,13 +29,16 @@ The new entry styles for  [<b>Fill in Multiple Blanks Questions </b>](https://he
    *  distintly different display from the traditional Blackboard white entry box with light bounding box
    * orange background with square edges
    * Set to 16pt Arial font, so typically larger than default Blackboard text.
-   * Two stypes of entry boxes available, one that take 50% of the horizontal screen width and the other takes 90%, so both are considerably longer than teh number based entry bbox_inches<br><br>
+   * Two stypes of entry boxes available, one that take 50% of the horizontal screen width and the other takes 90%, so both are considerably longer than the number based entry bbox_inches<br><br>
 
  A comparison of the different entry boxes styles is shown below.<br>
-<img src="resources/Q7_after.png" alt="Figure 1. Illustration of a typical and improved LMS question style.  Use of styled fonts for heading can imporve appeal, orange entryboxes are used to indicated word based entry is required, while light-blue entry boxes indicate numberic (with or without units) are required."  align="center" width="800"/> <br> <figcaption >  <I><b>Figure 1: </b></I>  Illustration of a typical and improved LMS question style.  Use of styled fonts for heading can imporve appeal, orange entryboxes are used to indicated word based entry is required, while light-blue entry boxes indicate numberic (with or without units) are required.<br>
+<img src="resources/Q7_after.png" alt="Figure 1. Illustration of a typical and improved LMS question style.  Use of styled fonts for heading can improve appeal, orange entry boxes are used to indicated word based entry is required, while light-blue entry boxes indicate numeric (with or without units) are required."  align="center" width="800"/> <br> <figcaption >  <I><b>Figure 1: </b></I>  Illustration of a typical and improved LMS question style.  Use of styled fonts for heading can imporve appeal, orange entry boxes are used to indicated word based entry is required, while light-blue entry boxes indicate numeric (with or without units) are required.<br>
 
-When using [Fill in Multiple Blanks Questions](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions), type the question text as students will see it, but replace the missing information with variables in square brackets. Bracketed variables appear as text boxes to students. Variables for [Fill in Multiple Blanks Questions](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions) can be any (unique) letter or word.
-For example<br>
+When using [Fill in Multiple Blanks Questions](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions), type the question text as students will see it, but replace the missing information with variables in square brackets. Bracketed variables appear as text boxes to students. Variables for [Fill in Multiple Blanks Questions](https://help.blackboard.com/Learn/Instructor/Tests_Pools_Surveys/Question_Types/Fill_in_Multiple_Blanks_Questions) can be any (unique) letter or word.  Once done, view the HTML of the question and cut and past the following to the top of the document,
+<code> \<p>\<link href="permanent_url" rel="stylesheet" type="text\/css" \/>\<\/p> </code>  
+where the <code>permanent_url</code> is replaced with the Permanent URL address you obtained once you uploaded the file (see above), so that the line added to the HTML file looks something like:  <code>
+\<p>\<link href="https://lms.uwa.edu.au/bbcswebdav/xid-25457619_1" rel="stylesheet" type="text\/css" \/>\<\/p> </code>
+Now to see the effect in your question if you had entered, for example  
  <code>Enter your numeric response here: [num1] </code><br>
 to use the new number style entry box simple add the \<span> tag and include my new class <code>AdrianNumberBox</code> (using the HTML entry format on LMS)<br>
  <code>\<span  class="AdrianNumberBox"> Enter your numeric response here: [num1] \</span></code><br>
